@@ -42,6 +42,7 @@ main,
   text-shadow: 0.5px 0.5px black;
   line-height: 28px;
   border: 1px solid #cecfcf;
+  cursor: pointer;
 }
 
 .color:hover {
@@ -80,4 +81,20 @@ main,
   background: -webkit-linear-gradient(#11074f, #6b9554, #d42d2f);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+[data-title] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-title]:hover::before {
+  content: attr(data-title);
+  position: absolute;
+  padding: 3px 15px;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+  left: 10%;
 }
